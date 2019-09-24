@@ -1,4 +1,16 @@
 /*
+make a new database
+make a table named people (id, name)
+make a table named cars (id, car_name)
+make a table named parts (id, part_name)
+make a table named person_cars (car_id, person_id)
+make a table named car_parts (car_id, part_id)
+insert 3 celebrities
+insert 4 cars
+insert 3 car parts
+insert 5 records (rows, entries) into person_cars
+insert 6 records into car_parts
+
 SHOW DATABASES;
 */
 
@@ -9,7 +21,7 @@ CREATE DATABASE bamazon;
 /* this is how i connect to a database*/
 USE bamazon;
 
-CREATE TABLE Products(
+CREATE TABLE products(
     item_id INT(4) NOT NULL, /* NOT NULL means that this column can not be empty, and it is called a constraint */
     product_name VARCHAR(255),
     department_name VARCHAR (255),
@@ -24,9 +36,9 @@ CREATE TABLE Products(
 		if 100 people insert at the sametime you're going to have a hard time figuring out which number to put in 
 */
 
-Select * FROM Products;
+Select * FROM products;
 
-INSERT INTO Products (item_id, product_name, department_name, price, stock_quantity) 
+INSERT INTO products (item_id, product_name, department_name, price, stock_quantity) 
 VALUES (399, "Logitech HD Pro Webcam C920", "Webcam", 63.89, 15),
 	   (735, "GIGABYTE GeForce GTX 1650 OC 4G Graphics Card", "Graphics Card", 159.99, 28),
 	   (264, "Corsair Vengeance LPX 16GB (2x8GB) DDR4 DRAM", "RAM", 69.99, 22),
